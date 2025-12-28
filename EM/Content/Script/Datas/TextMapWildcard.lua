@@ -2,6 +2,10 @@ local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
 end
 return ReadOnly("TextMapWildcard", {
+  Abyss_Battle_RemainTime = {
+    TextMapId = "Abyss_Battle_RemainTime",
+    WildcardClassification = "Story"
+  },
   Abyss_LevelName = {
     TextMapId = "Abyss_LevelName",
     WildcardClassification = "Story"
@@ -74,6 +78,14 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Content_120114_7",
     WildcardClassification = "Story"
   },
+  Content_Nai02_01_01 = {
+    TextMapId = "Content_Nai02_01_01",
+    WildcardClassification = "Story"
+  },
+  Content_Nai03_01_01 = {
+    TextMapId = "Content_Nai03_01_01",
+    WildcardClassification = "Story"
+  },
   Description_120111_3_4 = {
     TextMapId = "Description_120111_3_4",
     WildcardClassification = "Story"
@@ -118,6 +130,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "HomePianoDes_1004005",
     WildcardClassification = "Story"
   },
+  MOD_Type_Name_Changeling01 = {
+    TextMapId = "MOD_Type_Name_Changeling01",
+    WildcardClassification = "Story"
+  },
   MOD_Type_Name_FeatheredSnake01 = {
     TextMapId = "MOD_Type_Name_FeatheredSnake01",
     WildcardClassification = "Story"
@@ -142,6 +158,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Mail_Content_10033",
     WildcardClassification = "Story"
   },
+  Mail_Content_10060 = {
+    TextMapId = "Mail_Content_10060",
+    WildcardClassification = "Story"
+  },
   Mail_Title_10033 = {
     TextMapId = "Mail_Title_10033",
     WildcardClassification = "Story"
@@ -156,10 +176,6 @@ return ReadOnly("TextMapWildcard", {
   },
   NpcBiography_Information_XiAo_2 = {
     TextMapId = "NpcBiography_Information_XiAo_2",
-    WildcardClassification = "Story"
-  },
-  PROLOGUE_SELECTGUN_TIP_2 = {
-    TextMapId = "PROLOGUE_SELECTGUN_TIP_2",
     WildcardClassification = "Story"
   },
   Pet_Affix_Hold = {
@@ -518,6 +534,26 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "Title_10072",
     WildcardClassification = "Story"
   },
+  Title_10073 = {
+    TextMapId = "Title_10073",
+    WildcardClassification = "Story"
+  },
+  Title_10074 = {
+    TextMapId = "Title_10074",
+    WildcardClassification = "Story"
+  },
+  Title_10075 = {
+    TextMapId = "Title_10075",
+    WildcardClassification = "Story"
+  },
+  Title_10076 = {
+    TextMapId = "Title_10076",
+    WildcardClassification = "Story"
+  },
+  Title_10077 = {
+    TextMapId = "Title_10077",
+    WildcardClassification = "Story"
+  },
   UI_AbyssRoom_Count = {
     TextMapId = "UI_AbyssRoom_Count",
     WildcardClassification = "Story"
@@ -552,6 +588,18 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_BattlePass_RemainTime = {
     TextMapId = "UI_BattlePass_RemainTime",
+    WildcardClassification = "Story"
+  },
+  UI_BattlePass_RemainTime_Day = {
+    TextMapId = "UI_BattlePass_RemainTime_Day",
+    WildcardClassification = "Story"
+  },
+  UI_BattlePass_RemainTime_Hour = {
+    TextMapId = "UI_BattlePass_RemainTime_Hour",
+    WildcardClassification = "Story"
+  },
+  UI_BattlePass_RemainTime_Minute = {
+    TextMapId = "UI_BattlePass_RemainTime_Minute",
     WildcardClassification = "Story"
   },
   UI_BattleRoom_Count = {
@@ -638,8 +686,16 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_CHAR_SUBTITLE_160101",
     WildcardClassification = "Story"
   },
-  UI_Chardata_Data_Of = {
-    TextMapId = "UI_Chardata_Data_Of",
+  UI_Chardata_Char_Day = {
+    TextMapId = "UI_Chardata_Char_Day",
+    WildcardClassification = "Story"
+  },
+  UI_Chardata_Char_Month = {
+    TextMapId = "UI_Chardata_Char_Month",
+    WildcardClassification = "Story"
+  },
+  UI_Chardata_Char_Year = {
+    TextMapId = "UI_Chardata_Char_Year",
     WildcardClassification = "Story"
   },
   UI_Chardata_Recall = {
@@ -660,6 +716,18 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_DailyGoal_RemainTime = {
     TextMapId = "UI_DailyGoal_RemainTime",
+    WildcardClassification = "Story"
+  },
+  UI_DailyGoal_RemainTime_Day = {
+    TextMapId = "UI_DailyGoal_RemainTime_Day",
+    WildcardClassification = "Story"
+  },
+  UI_DailyGoal_RemainTime_Hour = {
+    TextMapId = "UI_DailyGoal_RemainTime_Hour",
+    WildcardClassification = "Story"
+  },
+  UI_DailyGoal_RemainTime_Minute = {
+    TextMapId = "UI_DailyGoal_RemainTime_Minute",
     WildcardClassification = "Story"
   },
   UI_Dispatch_Toast_CountDown_1 = {
@@ -692,6 +760,18 @@ return ReadOnly("TextMapWildcard", {
   },
   UI_Forge_Num = {
     TextMapId = "UI_Forge_Num",
+    WildcardClassification = "Story"
+  },
+  UI_GameEvent_TimeRemain_Day = {
+    TextMapId = "UI_GameEvent_TimeRemain_Day",
+    WildcardClassification = "Story"
+  },
+  UI_GameEvent_TimeRemain_Hour = {
+    TextMapId = "UI_GameEvent_TimeRemain_Hour",
+    WildcardClassification = "Story"
+  },
+  UI_GameEvent_TimeRemain_Min = {
+    TextMapId = "UI_GameEvent_TimeRemain_Min",
     WildcardClassification = "Story"
   },
   UI_HardBoss_ChancesRemain = {
@@ -730,6 +810,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Npc_Name_ExWeita",
     WildcardClassification = "Story"
   },
+  UI_Npc_Name_Nanzhu = {
+    TextMapId = "UI_Npc_Name_Nanzhu",
+    WildcardClassification = "Story"
+  },
   UI_Npc_Name_Nickname = {
     TextMapId = "UI_Npc_Name_Nickname",
     WildcardClassification = "Story"
@@ -758,16 +842,36 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "UI_Rou_RoomCurrent",
     WildcardClassification = "Story"
   },
+  UI_Rougelike_Reward_Day = {
+    TextMapId = "UI_Rougelike_Reward_Day",
+    WildcardClassification = "Story"
+  },
+  UI_Rougelike_Reward_Hour = {
+    TextMapId = "UI_Rougelike_Reward_Hour",
+    WildcardClassification = "Story"
+  },
+  UI_Rougelike_Reward_Minute = {
+    TextMapId = "UI_Rougelike_Reward_Minute",
+    WildcardClassification = "Story"
+  },
+  UI_SHOP_REMAINTIME_DAY = {
+    TextMapId = "UI_SHOP_REMAINTIME_DAY",
+    WildcardClassification = "Story"
+  },
+  UI_SHOP_REMAINTIME_HOUR = {
+    TextMapId = "UI_SHOP_REMAINTIME_HOUR",
+    WildcardClassification = "Story"
+  },
+  UI_SHOP_REMAINTIME_MINUTE = {
+    TextMapId = "UI_SHOP_REMAINTIME_MINUTE",
+    WildcardClassification = "Story"
+  },
   UI_SHOP_SHOPITEMLIMIT = {
     TextMapId = "UI_SHOP_SHOPITEMLIMIT",
     WildcardClassification = "Story"
   },
   UI_SkillTree_Attr_Add = {
     TextMapId = "UI_SkillTree_Attr_Add",
-    WildcardClassification = "Story"
-  },
-  UI_Skin_Name_1601 = {
-    TextMapId = "UI_Skin_Name_1601",
     WildcardClassification = "Story"
   },
   UI_Squad_ListName = {
@@ -902,6 +1006,10 @@ return ReadOnly("TextMapWildcard", {
     TextMapId = "WikiText_20100901",
     WildcardClassification = "Story"
   },
+  WikiText_20101002 = {
+    TextMapId = "WikiText_20101002",
+    WildcardClassification = "Story"
+  },
   WikiText_20101201 = {
     TextMapId = "WikiText_20101201",
     WildcardClassification = "Story"
@@ -928,6 +1036,38 @@ return ReadOnly("TextMapWildcard", {
   },
   WikiText_20102602 = {
     TextMapId = "WikiText_20102602",
+    WildcardClassification = "Story"
+  },
+  WikiText_20102701 = {
+    TextMapId = "WikiText_20102701",
+    WildcardClassification = "Story"
+  },
+  WikiText_20102801 = {
+    TextMapId = "WikiText_20102801",
+    WildcardClassification = "Story"
+  },
+  WikiText_20300101 = {
+    TextMapId = "WikiText_20300101",
+    WildcardClassification = "Story"
+  },
+  WikiText_20300102 = {
+    TextMapId = "WikiText_20300102",
+    WildcardClassification = "Story"
+  },
+  WikiText_20300104 = {
+    TextMapId = "WikiText_20300104",
+    WildcardClassification = "Story"
+  },
+  WikiText_20300105 = {
+    TextMapId = "WikiText_20300105",
+    WildcardClassification = "Story"
+  },
+  WikiText_20300601 = {
+    TextMapId = "WikiText_20300601",
+    WildcardClassification = "Story"
+  },
+  WikiText_20300701 = {
+    TextMapId = "WikiText_20300701",
     WildcardClassification = "Story"
   },
   WikiText_20400101 = {
@@ -984,6 +1124,10 @@ return ReadOnly("TextMapWildcard", {
   },
   WikiText_40500501 = {
     TextMapId = "WikiText_40500501",
+    WildcardClassification = "Story"
+  },
+  WikiText_40500902 = {
+    TextMapId = "WikiText_40500902",
     WildcardClassification = "Story"
   },
   WikiText_40800101 = {
@@ -1076,6 +1220,34 @@ return ReadOnly("TextMapWildcard", {
   },
   voice_ch_char_NanzhuLight_vo_skill02_r01 = {
     TextMapId = "voice_ch_char_NanzhuLight_vo_skill02_r01",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuLight_vo_appear = {
+    TextMapId = "voice_ch_char_NvzhuLight_vo_appear",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuLight_vo_battleidle = {
+    TextMapId = "voice_ch_char_NvzhuLight_vo_battleidle",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuLight_vo_battlestart = {
+    TextMapId = "voice_ch_char_NvzhuLight_vo_battlestart",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuLight_vo_die_r02 = {
+    TextMapId = "voice_ch_char_NvzhuLight_vo_die_r02",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuLight_vo_lvup = {
+    TextMapId = "voice_ch_char_NvzhuLight_vo_lvup",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuLight_vo_revive = {
+    TextMapId = "voice_ch_char_NvzhuLight_vo_revive",
+    WildcardClassification = "Story"
+  },
+  voice_ch_char_NvzhuLight_vo_skill02_r01 = {
+    TextMapId = "voice_ch_char_NvzhuLight_vo_skill02_r01",
     WildcardClassification = "Story"
   },
   voice_ch_char_Saiqi_vo_topic_04_2 = {

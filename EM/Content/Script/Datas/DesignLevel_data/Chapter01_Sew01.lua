@@ -1517,16 +1517,6 @@ return {
     }
   },
   ManualItem = {
-    ["1720012"] = {
-      ManualItemId = 1720012,
-      UnitType = "Mechanism",
-      UnitId = 10801
-    },
-    ["1720013"] = {
-      ManualItemId = 1720013,
-      UnitType = "Mechanism",
-      UnitId = 10801
-    },
     ["1720100"] = {
       ManualItemId = 1720100,
       UnitType = "Mechanism",
@@ -1706,6 +1696,11 @@ return {
       ManualItemId = 1720008,
       UnitType = "Mechanism",
       UnitId = 10412
+    },
+    ["172040"] = {
+      ManualItemId = 172040,
+      UnitType = "Mechanism",
+      UnitId = 10406
     }
   },
   Explore = {

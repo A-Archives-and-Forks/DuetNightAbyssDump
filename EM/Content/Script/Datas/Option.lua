@@ -11,22 +11,49 @@ T.RT_2 = {
   "UI_EffectQuality_ExtremelyHigh"
 }
 T.RT_3 = {0, 10}
-T.RT_4 = {1, 20}
-T.RT_5 = {
+T.RT_4 = {0, 100}
+T.RT_5 = {1, 20}
+T.RT_6 = {
   "90%",
   "95%",
   "100%"
 }
-T.RT_6 = {
+T.RT_7 = {0}
+T.RT_8 = {
+  "UI_Setting_Hide",
+  "UI_Setting_Display"
+}
+T.RT_9 = {
   "UI_OPTION_Swicth_Close",
   "UI_EffectQuality_Low",
   "UI_EffectQuality_Middle",
   "UI_EffectQuality_High"
 }
-T.RT_7 = {
-  "UI_EffectQuality_Low",
-  "UI_EffectQuality_Middle",
-  "UI_EffectQuality_High"
+T.RT_10 = {0, 1}
+T.RT_11 = {
+  1,
+  2,
+  4,
+  5,
+  7
+}
+T.RT_12 = {
+  3,
+  2,
+  4,
+  5
+}
+T.RT_13 = {
+  1,
+  2,
+  4,
+  5
+}
+T.RT_14 = {
+  0,
+  1,
+  2,
+  2
 }
 local ReadOnly = (DataMgr or {}).ReadOnly or function(n, x)
   return x
@@ -57,7 +84,8 @@ return ReadOnly("Option", {
     EMCacheName = "ConsoleVariable",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 55,
+    SortId = 73,
+    SpecialHide = 99,
     SwitchText = T.RT_1,
     Tag = "View",
     TagID = 3,
@@ -71,16 +99,13 @@ return ReadOnly("Option", {
     DefaultValue = "2.0",
     DefaultValueM = "2.0",
     EMCacheName = "AntiAliasing",
+    HideOnPhone = true,
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 47,
-    SubOptionDefaultValue = {
-      0,
-      4,
-      4
+    SortId = 56,
+    SubOptionList = {
+      "AntiAliasingQuality"
     },
-    SubOptionName = "UI_OPTION_AntiAliasingQuality",
-    SubOptionText = T.RT_2,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -95,6 +120,43 @@ return ReadOnly("Option", {
       "UI_Option_Dropdown_23"
     }
   },
+  AntiAliasingMobile = {
+    Cache = "AntiAliasingMobile",
+    CacheText = "UI_Option_Dropdown_23",
+    ControlType = "Switch",
+    DefaultValue = "True",
+    DefaultValueM = "True",
+    EMCacheName = "AntiAliasingMobile",
+    HideOnPC = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 58,
+    SwitchText = T.RT_1,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true
+  },
+  AntiAliasingQuality = {
+    Cache = "AntiAliasingQuality",
+    CacheText = "UI_OPTION_AntiAliasingQuality",
+    ControlType = "UnFold",
+    DefaultValue = "2.0",
+    DefaultValueM = "2.0",
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 57,
+    SubOptionDefaultValue = {
+      0,
+      4,
+      4
+    },
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true,
+    UnFoldText = T.RT_2
+  },
   AutoJoin = {
     Cache = "AutoJoin",
     CacheText = "UI_OPTION_AutoJoin",
@@ -103,7 +165,7 @@ return ReadOnly("Option", {
     DefaultValueM = "True",
     EMCacheName = "AutoJoin",
     Region = 1,
-    SortId = 73,
+    SortId = 91,
     SwitchText = T.RT_1,
     Tag = "Other",
     TagID = 6,
@@ -134,7 +196,7 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_Opition_View",
     GameHide = 2,
     Region = 1,
-    SortId = 80,
+    SortId = 101,
     SpecialHide = 1,
     Tag = "Other",
     TagID = 6,
@@ -149,7 +211,7 @@ return ReadOnly("Option", {
     EMCacheName = "ContentPerformance",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 45,
+    SortId = 54,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -164,7 +226,7 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_GameEvent_Goto",
     GameHide = 2,
     Region = 1,
-    SortId = 76,
+    SortId = 94,
     Tag = "Other",
     TagID = 6,
     TagName = "UI_OPTION_Other",
@@ -180,24 +242,8 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 29,
-    SubOptionDefaultValue = {
-      0,
-      1,
-      1,
-      1,
-      1,
-      1,
-      1
-    },
-    SubOptionName = "UI_OPTION_DLSSOption",
-    SubOptionText = {
-      "UI_OPTION_Swicth_Close",
-      "UI_OPTION_DLSSQuality_1",
-      "UI_OPTION_DLSSOption_2X",
-      "UI_OPTION_DLSSOption_3X",
-      "UI_OPTION_DLSSOption_4X"
-    },
+    SortId = 38,
+    SpecialHide = 99,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -210,6 +256,28 @@ return ReadOnly("Option", {
       "UI_OPTION_DLSSQuality_5",
       "UI_OPTION_DLSSQuality_6",
       "UI_Option_Dropdown_20"
+    }
+  },
+  DLSSOption = {
+    Cache = "DLSSOption",
+    CacheText = "UI_OPTION_DLSSOption",
+    ControlType = "UnFold",
+    DefaultValue = "0.0",
+    DefaultValueM = "0.0",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 62,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true,
+    UnFoldText = {
+      "UI_OPTION_Swicth_Close",
+      "UI_OPTION_DLSSQuality_1",
+      "UI_OPTION_DLSSOption_2X",
+      "UI_OPTION_DLSSOption_3X",
+      "UI_OPTION_DLSSOption_4X"
     }
   },
   DamageTextAmount = {
@@ -240,7 +308,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 1,
-    ScrollNum = {0, 100},
+    ScrollNum = T.RT_4,
     SortId = 18,
     Tag = "Control",
     TagID = 2,
@@ -254,7 +322,8 @@ return ReadOnly("Option", {
     DefaultValueM = "2.0",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 60,
+    SortId = 78,
+    SpecialHide = 99,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -275,7 +344,8 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 61,
+    SortId = 79,
+    SpecialHide = 99,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -291,7 +361,8 @@ return ReadOnly("Option", {
     EMCacheName = "ConsoleVariable",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 50,
+    SortId = 65,
+    SpecialHide = 99,
     SwitchText = T.RT_1,
     Tag = "View",
     TagID = 3,
@@ -307,7 +378,7 @@ return ReadOnly("Option", {
     EMCacheName = "GameUserSettings",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 34,
+    SortId = 43,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -337,6 +408,20 @@ return ReadOnly("Option", {
     TagID = 2,
     TagName = "UI_OPTION_CONTROLLER"
   },
+  EnhancedLog = {
+    Cache = "EnhancedLog",
+    CacheText = "UI_OPTION_EnhancedLog",
+    ControlType = "Switch",
+    DefaultValue = "False",
+    DefaultValueM = "False",
+    Region = 1,
+    SortId = 95,
+    SubOptionList = {"LogUpdate"},
+    SwitchText = T.RT_1,
+    Tag = "Other",
+    TagID = 6,
+    TagName = "UI_OPTION_Other"
+  },
   ExchangeCode = {
     Cache = "ExchangeCode",
     CacheText = "UI_OPTION_ExchangeCode",
@@ -345,11 +430,10 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_ActionPoint_Use",
     GameHide = 2,
     Region = 1,
-    SortId = 77,
+    SortId = 98,
     Tag = "Other",
     TagID = 6,
-    TagName = "UI_OPTION_Other",
-    UCloudHide = true
+    TagName = "UI_OPTION_Other"
   },
   FSR = {
     Cache = "FSR",
@@ -361,7 +445,8 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 30,
+    SortId = 39,
+    SpecialHide = 99,
     SwitchText = T.RT_1,
     Tag = "View",
     TagID = 3,
@@ -392,20 +477,37 @@ return ReadOnly("Option", {
     DefaultValueM = "True",
     EMCacheName = "ForceFeedback",
     GameHide = 2,
+    HideOnPhone = true,
     Region = 2,
     RegionName = "UI_OPTION_Gamepad",
-    SortId = 24,
-    SubOptionDefaultValue = {2},
-    SubOptionName = "UI_OPTION_ForceFeedbackScale",
-    SubOptionText = {
-      "UI_OPTION_Strong",
-      "UI_OPTION_Medium",
-      "UI_OPTION_Weak"
+    SortId = 25,
+    SubOptionList = {
+      "ForceFeedbackScale"
     },
     SwitchText = T.RT_1,
     Tag = "Control",
     TagID = 2,
     TagName = "UI_OPTION_CONTROLLER"
+  },
+  ForceFeedbackScale = {
+    Cache = "ForceFeedbackScale",
+    CacheText = "UI_OPTION_ForceFeedbackScale",
+    ControlType = "UnFold",
+    DefaultValue = "0.0",
+    DefaultValueM = "0.0",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_OPTION_Gamepad",
+    SortId = 26,
+    SubOptionDefaultValue = {0, 2},
+    Tag = "Control",
+    TagID = 2,
+    TagName = "UI_OPTION_CONTROLLER",
+    UnFoldText = {
+      "UI_OPTION_Strong",
+      "UI_OPTION_Medium",
+      "UI_OPTION_Weak"
+    }
   },
   Fps = {
     Cache = "Fps",
@@ -416,7 +518,7 @@ return ReadOnly("Option", {
     EMCacheName = "Fps",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 31,
+    SortId = 40,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -447,7 +549,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 10,
-    ScrollNum = T.RT_4,
+    ScrollNum = T.RT_5,
     SortId = 5,
     Tag = "Control",
     TagID = 2,
@@ -465,7 +567,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 10,
-    ScrollNum = T.RT_4,
+    ScrollNum = T.RT_5,
     SortId = 7,
     Tag = "Control",
     TagID = 2,
@@ -483,7 +585,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 10,
-    ScrollNum = T.RT_4,
+    ScrollNum = T.RT_5,
     SortId = 6,
     Tag = "Control",
     TagID = 2,
@@ -501,7 +603,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 10,
-    ScrollNum = T.RT_4,
+    ScrollNum = T.RT_5,
     SortId = 8,
     Tag = "Control",
     TagID = 2,
@@ -519,7 +621,7 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 2,
     RegionName = "UI_OPTION_Gamepad",
-    SortId = 23,
+    SortId = 24,
     Tag = "Control",
     TagID = 2,
     TagName = "UI_OPTION_CONTROLLER",
@@ -539,13 +641,13 @@ return ReadOnly("Option", {
     EMCacheName = "HUDScale",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 38,
+    SortId = 47,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true,
-    UnFoldText = T.RT_5,
-    UnFoldTextM = T.RT_5
+    UnFoldText = T.RT_6,
+    UnFoldTextM = T.RT_6
   },
   HideBackWeapons = {
     Cache = "HideBackWeapons",
@@ -571,7 +673,7 @@ return ReadOnly("Option", {
     DefaultValueM = "False",
     EMCacheName = "HidePlayer",
     Region = 1,
-    SortId = 74,
+    SortId = 92,
     SwitchText = T.RT_1,
     Tag = "Other",
     TagID = 6,
@@ -589,7 +691,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 10,
-    ScrollNum = T.RT_4,
+    ScrollNum = T.RT_5,
     SortId = 1,
     Tag = "Control",
     TagID = 2,
@@ -607,7 +709,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 10,
-    ScrollNum = T.RT_4,
+    ScrollNum = T.RT_5,
     SortId = 3,
     Tag = "Control",
     TagID = 2,
@@ -622,7 +724,7 @@ return ReadOnly("Option", {
     GameHide = 2,
     HideOnPhone = true,
     Region = 1,
-    SortId = 72,
+    SortId = 90,
     SwitchText = T.RT_1,
     Tag = "Other",
     TagID = 6,
@@ -637,31 +739,78 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 1,
     RegionName = "UI_Option_Area_12",
-    SortId = 27,
-    SubOptionDefaultValue = {
-      1,
-      1,
-      2,
-      2,
-      2,
-      2
-    },
-    SubOptionName = "UI_OPTION_Resolution",
-    SubOptionText = {
-      "Dynamic_Resolution"
+    SortId = 31,
+    SubOptionList = {
+      "InterfaceModeResolution"
     },
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true,
     UnFoldText = {
-      "UI_OPTION_InterfaceMode_Full",
       "UI_OPTION_InterfaceMode_NoFrame",
       "UI_OPTION_InterfaceMode_Window4:3",
       "UI_OPTION_InterfaceMode_Window16:9",
       "UI_OPTION_InterfaceMode_Window21:9",
       "UI_OPTION_InterfaceMode_Window23:9"
     }
+  },
+  InterfaceModeResolution = {
+    Cache = "InterfaceModeResolution",
+    CacheText = "UI_OPTION_Resolution",
+    ControlType = "UnFold",
+    DefaultValue = "1.0",
+    DefaultValueM = "1.0",
+    Region = 1,
+    RegionName = "UI_Option_Area_12",
+    SortId = 32,
+    SubOptionDefaultValue = {
+      1,
+      2,
+      2,
+      2,
+      2
+    },
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UnFoldText = {
+      "Dynamic_Resolution"
+    }
+  },
+  LeftBulletJumpShow = {
+    Cache = "LeftBulletJumpShow",
+    CacheText = "UI_OPTION_LeftBulletJumpShow",
+    ControlType = "Switch",
+    DefaultValue = "False",
+    DefaultValueM = "False",
+    EMCacheName = "HasLeftBulletJump",
+    GameHide = 2,
+    HideOnGamePad = true,
+    HideOnKeyboard = true,
+    HideOnPC = true,
+    SortId = 28,
+    SubOptionDefaultValue = T.RT_7,
+    SwitchText = T.RT_8,
+    Tag = "Control",
+    TagID = 2
+  },
+  LeftShootShow = {
+    Cache = "LeftShootShow",
+    CacheText = "UI_OPTION_LeftShootShow\t",
+    ControlType = "Switch",
+    DefaultValue = "False",
+    DefaultValueM = "False",
+    EMCacheName = "HasLeftShoot",
+    GameHide = 2,
+    HideOnGamePad = true,
+    HideOnKeyboard = true,
+    HideOnPC = true,
+    SortId = 27,
+    SubOptionDefaultValue = T.RT_7,
+    SwitchText = T.RT_8,
+    Tag = "Control",
+    TagID = 2
   },
   LocalWindDetail = {
     Cache = "LocalWindDetail",
@@ -673,13 +822,25 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 58,
+    SortId = 76,
     SwitchText = T.RT_1,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true,
-    UnFoldText = T.RT_6
+    UnFoldText = T.RT_9
+  },
+  LogClean = {
+    Cache = "LogClean",
+    CacheText = "UI_OPTION_LogClean",
+    ControlType = "Click",
+    DefaultValue = "UI_Opition_Clean",
+    DefaultValueM = "UI_Opition_Clean",
+    Region = 1,
+    SortId = 97,
+    Tag = "Other",
+    TagID = 6,
+    TagName = "UI_OPTION_Other"
   },
   LogOffAccount = {
     Cache = "LogOffAccount",
@@ -690,12 +851,26 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_OPTION_Logoff",
     GameHide = 2,
     Region = 1,
-    SortId = 83,
+    SortId = 104,
     SpecialHide = 1,
     Tag = "Other",
     TagID = 6,
     TagName = "UI_OPTION_Other",
     UCloudHide = true
+  },
+  LogUpdate = {
+    Cache = "LogUpdate",
+    CacheText = "UI_OPTION_LogUpdate",
+    ControlType = "Click",
+    DefaultValue = "UI_Opition_Update",
+    DefaultValueM = "UI_Opition_Update",
+    MobileSubOptionDefaultValue = T.RT_10,
+    Region = 1,
+    SortId = 96,
+    SubOptionDefaultValue = T.RT_10,
+    Tag = "Other",
+    TagID = 6,
+    TagName = "UI_OPTION_Other"
   },
   LongPressLockShooting = {
     Cache = "LongPressLockShooting",
@@ -723,18 +898,13 @@ return ReadOnly("Option", {
     EMCacheName = "ConsoleVariable",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 49,
+    SortId = 64,
+    SpecialHide = 99,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true,
-    UnFoldText = {
-      "UI_Option_Dropdown_25",
-      "UI_Option_Dropdown_26",
-      "UI_Option_Dropdown_27",
-      "UI_Option_Dropdown_28",
-      "UI_Option_Dropdown_29"
-    }
+    UnFoldText = T.RT_2
   },
   MaterialQuality = {
     Cache = "MaterialQuality",
@@ -745,7 +915,7 @@ return ReadOnly("Option", {
     EMCacheName = "GameUserSettings",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 48,
+    SortId = 63,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -756,18 +926,24 @@ return ReadOnly("Option", {
     Cache = "MobileResolution",
     CacheText = "UI_OPTION_MobileResolution",
     ControlType = "UnFold",
-    DefaultValue = "2.0",
-    DefaultValueM = "2.0",
+    DefaultValue = "3.0",
+    DefaultValueM = "3.0",
     HideOnPC = true,
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 32,
+    SortId = 41,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true,
-    UnFoldText = T.RT_7,
-    UnFoldTextM = T.RT_7
+    UnFoldText = {
+      "UI_EffectQuality_ExtremelyLow",
+      "UI_EffectQuality_Low",
+      "UI_EffectQuality_Middle",
+      "UI_EffectQuality_High",
+      "UI_EffectQuality_High"
+    },
+    UnFoldTextM = T.RT_2
   },
   MusicVolume = {
     Cache = "MusicVolume",
@@ -781,7 +957,7 @@ return ReadOnly("Option", {
     RegionName = "UI_Option_Area_5",
     ScrollMappingScale = 10,
     ScrollNum = T.RT_3,
-    SortId = 66,
+    SortId = 84,
     Tag = "Voice",
     TagID = 4,
     TagName = "UI_OPTION_AUDIO"
@@ -796,7 +972,7 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 1,
     RegionName = "UI_Option_Area_4",
-    SortId = 65,
+    SortId = 83,
     SwitchText = T.RT_1,
     Tag = "Voice",
     TagID = 4,
@@ -811,7 +987,7 @@ return ReadOnly("Option", {
     EMCacheName = "OverallPreset",
     Region = 1,
     RegionName = "UI_Option_Area_12",
-    SortId = 25,
+    SortId = 29,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -825,6 +1001,21 @@ return ReadOnly("Option", {
       "UI_Option_Area_11"
     }
   },
+  PlantEnhance = {
+    Cache = "PlantEnhance",
+    CacheText = "UI_OPTION_PlantEnhance",
+    ControlType = "UnFold",
+    DefaultValue = "3.0",
+    DefaultValueM = "3.0",
+    EMCacheName = "FoliageQuality",
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 70,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UnFoldText = T.RT_2
+  },
   PostEffect = {
     Cache = "PostEffect",
     CacheText = "UI_OPTION_PostEffect",
@@ -834,7 +1025,8 @@ return ReadOnly("Option", {
     EMCacheName = "ConsoleVariable",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 62,
+    SortId = 80,
+    SpecialHide = 99,
     SwitchText = T.RT_1,
     Tag = "View",
     TagID = 3,
@@ -849,7 +1041,7 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_Opition_View",
     GameHide = 2,
     Region = 1,
-    SortId = 79,
+    SortId = 100,
     Tag = "Other",
     TagID = 6,
     TagName = "UI_OPTION_Other"
@@ -865,12 +1057,151 @@ return ReadOnly("Option", {
     HideOnPhone = true,
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 51,
+    SortId = 66,
     SwitchText = T.RT_1,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true
+  },
+  QualityMode = {
+    Cache = "QualityMode",
+    CacheText = "UI_OPTION_QualityMode",
+    ControlType = "UnFold",
+    DefaultValue = "1.0",
+    DefaultValueM = "1.0",
+    MobileSubOptionDefaultValue = {
+      0,
+      2,
+      2
+    },
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 60,
+    SubOptionDefaultValue = {
+      0,
+      2,
+      2,
+      2
+    },
+    SubOptionMultiList = {
+      [1] = T.RT_11,
+      [2] = T.RT_11,
+      [3] = T.RT_12,
+      [4] = T.RT_12
+    },
+    SubOptionMultiListM = {
+      [1] = T.RT_13,
+      [2] = T.RT_13,
+      [3] = T.RT_13
+    },
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true,
+    UnFoldText = {
+      "UI_OPTION_DLSSQuality_1",
+      "UI_OPTION_DLSSQuality_3",
+      "UI_OPTION_DLSSQuality_4",
+      "UI_OPTION_DLSSQuality_2",
+      "UI_OPTION_DLSSQuality_5",
+      "UI_OPTION_DLSSQuality_6",
+      "UI_Option_Dropdown_20"
+    },
+    UnFoldTextM = {
+      "UI_OPTION_DLSSQuality_4",
+      "UI_OPTION_DLSSQuality_3",
+      "UI_OPTION_DLSSQuality_2",
+      "UI_OPTION_DLSSQuality_5"
+    }
+  },
+  RayTracing = {
+    Cache = "RayTracing",
+    CacheText = "UI_OPTION_RayTracing",
+    ControlType = "UnFold",
+    DefaultValue = "1.0",
+    DefaultValueM = "1.0",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 34,
+    SpecialHide = 99,
+    SubOptionList = {
+      "RayTracingReflect",
+      "RayTracingGlobalLight",
+      "RayTracingShadow"
+    },
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true,
+    UnFoldText = T.RT_9
+  },
+  RayTracingGlobalLight = {
+    Cache = "RayTracingGlobalLight",
+    CacheText = "UI_OPTION_RayTracingGlobalLight",
+    ControlType = "Switch",
+    DefaultValue = "False",
+    DefaultValueM = "False",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 36,
+    SubOptionDefaultValue = T.RT_14,
+    SwitchText = T.RT_1,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true
+  },
+  RayTracingReflect = {
+    Cache = "RayTracingReflect",
+    CacheText = "UI_OPTION_RayTracingReflect",
+    ControlType = "Switch",
+    DefaultValue = "False",
+    DefaultValueM = "False",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 35,
+    SubOptionDefaultValue = T.RT_14,
+    SwitchText = T.RT_1,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true
+  },
+  RayTracingShadow = {
+    Cache = "RayTracingShadow",
+    CacheText = "UI_OPTION_RayTracingShadow",
+    ControlType = "Switch",
+    DefaultValue = "False",
+    DefaultValueM = "False",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 37,
+    SubOptionDefaultValue = T.RT_14,
+    SwitchText = T.RT_1,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true
+  },
+  RealtimeSunlight = {
+    Cache = "RealtimeSunlight",
+    CacheText = "UI_OPTION_RealtimeSunlight",
+    ControlType = "Switch",
+    DefaultValue = "True",
+    DefaultValueM = "True",
+    EMCacheName = "RealtimeSunlight",
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 69,
+    SwitchText = T.RT_1,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY"
   },
   RefractiveQuality = {
     Cache = "RefractiveQuality",
@@ -881,12 +1212,13 @@ return ReadOnly("Option", {
     EMCacheName = "ConsoleVariable",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 54,
+    SortId = 72,
+    SpecialHide = 99,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true,
-    UnFoldText = T.RT_6
+    UnFoldText = T.RT_9
   },
   ReleaseStuck = {
     Cache = "ReleaseStuck",
@@ -896,10 +1228,31 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_OPTION_ReleaseStuck_Default",
     GameHide = 2,
     Region = 1,
-    SortId = 75,
+    SortId = 93,
     Tag = "Other",
     TagID = 6,
     TagName = "UI_OPTION_Other"
+  },
+  Rendering = {
+    Cache = "Rendering",
+    CacheText = "UI_OPTION_Rendering",
+    ControlType = "UnFold",
+    DefaultValue = "2.0",
+    DefaultValueM = "2.0",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 46,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true,
+    UnFoldText = {
+      "UI_Option_Dropdown_8",
+      "UI_Option_Dropdown_9",
+      "UI_Option_Dropdown_10",
+      "UI_Option_Dropdown_11"
+    }
   },
   ScreenFilter = {
     Cache = "ScreenFilter",
@@ -910,7 +1263,7 @@ return ReadOnly("Option", {
     EMCacheName = "ScreenFilter",
     Region = 1,
     RegionName = "UI_Option_Area_11",
-    SortId = 26,
+    SortId = 30,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -930,7 +1283,7 @@ return ReadOnly("Option", {
     EMCacheName = "ScreenQuality",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 63,
+    SortId = 81,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -950,12 +1303,36 @@ return ReadOnly("Option", {
     EMCacheName = "GameUserSettings",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 33,
+    SortId = 42,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true,
     UnFoldText = T.RT_2
+  },
+  Sharpen = {
+    Cache = "Sharpen",
+    CacheText = "UI_OPTION_Sharpen",
+    ControlType = "Scroll",
+    DefaultValue = "50.0",
+    DefaultValueM = "50.0",
+    EMCacheName = "Sharpen",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    ScrollMappingScale = 100,
+    ScrollNum = T.RT_4,
+    SortId = 61,
+    SubOptionDefaultValue = {
+      0,
+      50,
+      50,
+      0
+    },
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true
   },
   ShowBuffEnemy = {
     Cache = "ShowBuffEnemy",
@@ -967,7 +1344,7 @@ return ReadOnly("Option", {
     GameHide = 2,
     Region = 1,
     RegionName = "UI_Option_Area_1",
-    SortId = 21,
+    SortId = 22,
     SwitchText = T.RT_1,
     Tag = "Control",
     TagID = 2,
@@ -983,7 +1360,7 @@ return ReadOnly("Option", {
     GameHide = 2,
     Region = 1,
     RegionName = "UI_Option_Area_1",
-    SortId = 22,
+    SortId = 23,
     SwitchText = T.RT_1,
     Tag = "Control",
     TagID = 2,
@@ -1004,6 +1381,26 @@ return ReadOnly("Option", {
     Tag = "Control",
     TagID = 2,
     TagName = "UI_OPTION_CONTROLLER"
+  },
+  ShowPlayerName = {
+    Cache = "ShowPlayerName",
+    CacheText = "UI_OPTION_ShowPlayerName",
+    ControlType = "UnFold",
+    DefaultValue = "2.0",
+    DefaultValueM = "2.0",
+    EMCacheName = "ShowPlayerName",
+    GameHide = 2,
+    Region = 1,
+    RegionName = "UI_Option_Area_1",
+    SortId = 21,
+    Tag = "Control",
+    TagID = 2,
+    TagName = "UI_OPTION_CONTROLLER",
+    UnFoldText = {
+      "UI_OPTION_Hide",
+      "UI_OPTION_RegionOnly",
+      "UI_OPTION_Always"
+    }
   },
   SkillFaceTo = {
     Cache = "SkillFaceTo",
@@ -1036,7 +1433,7 @@ return ReadOnly("Option", {
     RegionName = "UI_Option_Area_5",
     ScrollMappingScale = 10,
     ScrollNum = T.RT_3,
-    SortId = 68,
+    SortId = 86,
     Tag = "Voice",
     TagID = 4,
     TagName = "UI_OPTION_AUDIO"
@@ -1046,7 +1443,7 @@ return ReadOnly("Option", {
     CacheText = "UI_OPTION_CameraDistance",
     ControlType = "Scroll",
     DefaultValue = "11.0",
-    DefaultValueM = "9.0",
+    DefaultValueM = "8.0",
     EMCacheName = "SpringArmRate",
     GameHide = 2,
     Region = 1,
@@ -1068,7 +1465,7 @@ return ReadOnly("Option", {
     GameHide = 2,
     Region = 1,
     RegionName = "UI_Option_Area_2",
-    SortId = 69,
+    SortId = 87,
     Tag = "Language",
     TagID = 5,
     TagName = "UI_OPTION_LANGUAGE",
@@ -1078,7 +1475,10 @@ return ReadOnly("Option", {
       "UI_Language_Text_EN",
       "UI_Language_Text_JP",
       "UI_Language_Text_KR",
-      "UI_Language_Text_TC"
+      "UI_Language_Text_TC",
+      "UI_Language_Text_DE",
+      "UI_Language_Text_FR",
+      "UI_Language_Text_ES"
     }
   },
   SystemVoice = {
@@ -1091,7 +1491,7 @@ return ReadOnly("Option", {
     GameHide = 2,
     Region = 2,
     RegionName = "UI_Option_Area_13",
-    SortId = 70,
+    SortId = 88,
     Tag = "Language",
     TagID = 5,
     TagName = "UI_OPTION_LANGUAGE",
@@ -1111,7 +1511,7 @@ return ReadOnly("Option", {
     EMCacheName = "TeammateEffects",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 44,
+    SortId = 53,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
@@ -1130,7 +1530,7 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_Opition_View",
     GameHide = 2,
     Region = 1,
-    SortId = 78,
+    SortId = 99,
     SpecialHide = 2,
     Tag = "Other",
     TagID = 6,
@@ -1145,7 +1545,7 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_Opition_View",
     GameHide = 2,
     Region = 1,
-    SortId = 81,
+    SortId = 102,
     SpecialHide = 1,
     Tag = "Other",
     TagID = 6,
@@ -1163,7 +1563,7 @@ return ReadOnly("Option", {
     RegionName = "UI_Option_Area_4",
     ScrollMappingScale = 10,
     ScrollNum = T.RT_3,
-    SortId = 64,
+    SortId = 82,
     Tag = "Voice",
     TagID = 4,
     TagName = "UI_OPTION_AUDIO"
@@ -1184,6 +1584,35 @@ return ReadOnly("Option", {
     TagID = 2,
     TagName = "UI_OPTION_CONTROLLER"
   },
+  UpscalingMethod = {
+    Cache = "UpscalingMethod",
+    CacheText = "UI_OPTION_UpscalingMethod",
+    ControlType = "UnFold",
+    DefaultValue = "2.0",
+    DefaultValueM = "1.0",
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 59,
+    SubOptionList = {
+      "QualityMode",
+      "Sharpen"
+    },
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UCloudHide = true,
+    UnFoldText = {
+      "UI_OPTION_Swicth_Close",
+      "UI_OPTION_DLSS",
+      "UI_OPTION_FSR",
+      "UI_OPTION_XeSS"
+    },
+    UnFoldTextM = {
+      "UI_OPTION_Swicth_Close",
+      "UI_OPTION_MFSR",
+      "UI_OPTION_GSR"
+    }
+  },
   UserCentre = {
     Cache = "UserCentre",
     CacheText = "UI_OPTION_UserCentre",
@@ -1193,7 +1622,7 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_OPTION_Goto",
     GameHide = 2,
     Region = 1,
-    SortId = 84,
+    SortId = 105,
     SpecialHide = 2,
     Tag = "Other",
     TagID = 6,
@@ -1207,7 +1636,7 @@ return ReadOnly("Option", {
     DefaultValueM = "UI_Opition_View",
     GameHide = 2,
     Region = 1,
-    SortId = 82,
+    SortId = 103,
     SpecialHide = 1,
     Tag = "Other",
     TagID = 6,
@@ -1225,7 +1654,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 10,
-    ScrollNum = T.RT_4,
+    ScrollNum = T.RT_5,
     SortId = 2,
     Tag = "Control",
     TagID = 2,
@@ -1243,7 +1672,7 @@ return ReadOnly("Option", {
     Region = 1,
     RegionName = "UI_Option_Area_1",
     ScrollMappingScale = 10,
-    ScrollNum = T.RT_4,
+    ScrollNum = T.RT_5,
     SortId = 4,
     Tag = "Control",
     TagID = 2,
@@ -1257,7 +1686,7 @@ return ReadOnly("Option", {
     DefaultValueM = "True",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 39,
+    SortId = 48,
     SwitchText = T.RT_1,
     Tag = "View",
     TagID = 3,
@@ -1273,7 +1702,7 @@ return ReadOnly("Option", {
     GameHide = 2,
     Region = 2,
     RegionName = "UI_Option_Area_13",
-    SortId = 71,
+    SortId = 89,
     Tag = "Language",
     TagID = 5,
     TagName = "UI_OPTION_LANGUAGE"
@@ -1290,7 +1719,7 @@ return ReadOnly("Option", {
     RegionName = "UI_Option_Area_5",
     ScrollMappingScale = 10,
     ScrollNum = T.RT_3,
-    SortId = 67,
+    SortId = 85,
     Tag = "Voice",
     TagID = 4,
     TagName = "UI_OPTION_AUDIO"
@@ -1304,12 +1733,29 @@ return ReadOnly("Option", {
     EMCacheName = "ConsoleVariable",
     Region = 2,
     RegionName = "UI_Option_Area_11",
-    SortId = 56,
+    SortId = 74,
+    SpecialHide = 99,
     SwitchText = T.RT_1,
     Tag = "View",
     TagID = 3,
     TagName = "UI_OPTION_DISPLAY",
     UCloudHide = true,
-    UnFoldText = T.RT_6
+    UnFoldText = T.RT_9
+  },
+  WaterQuality = {
+    Cache = "WaterQuality",
+    CacheText = "UI_OPTION_WaterQuality",
+    ControlType = "UnFold",
+    DefaultValue = "3.0",
+    DefaultValueM = "3.0",
+    EMCacheName = "WaterQuality",
+    HideOnPhone = true,
+    Region = 2,
+    RegionName = "UI_Option_Area_11",
+    SortId = 71,
+    Tag = "View",
+    TagID = 3,
+    TagName = "UI_OPTION_DISPLAY",
+    UnFoldText = T.RT_2
   }
 })

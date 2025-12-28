@@ -40,6 +40,7 @@ return ReadOnly("ExamineInfo", {
     ExamineKey = "13.0",
     HostNum = 5001,
     IP = "121.199.19.146",
+    JumpURL = "https://www.3839.com/a/183726.htm",
     MirrorChannelID = 288,
     Port = 8000
   },
@@ -70,7 +71,10 @@ return ReadOnly("ExamineInfo", {
   ["17.0"] = {
     ChannelID = 160,
     ExamineKey = "17.0",
-    JumpURL = "https://play.google.com/store/apps/details?id=com.panstudio.gplay.duetnightabyss.arpg.global"
+    HostNum = 5003,
+    IP = "43.130.139.32",
+    JumpURL = "https://play.google.com/store/apps/details?id=com.panstudio.gplay.duetnightabyss.arpg.global",
+    Port = 8000
   },
   ["18.0"] = {ChannelID = 240, ExamineKey = "18.0"},
   ["19.0"] = {
@@ -86,6 +90,26 @@ return ReadOnly("ExamineInfo", {
     HostNum = 5001,
     IP = "121.199.19.146",
     JumpURL = "https://dna.yingxiong.com",
+    MirrorChannelID = 0,
+    Port = 8000
+  },
+  ["20.0"] = {
+    ChannelID = 240,
+    ExamineKey = "20.0",
+    MirrorChannelID = 307
+  },
+  ["21.0"] = {
+    ChannelID = 305,
+    ExamineKey = "21.0",
+    HostNum = 5003,
+    IP = "43.130.139.32",
+    Port = 8000
+  },
+  ["22.0"] = {
+    ChannelID = 314,
+    ExamineKey = "22.0",
+    HostNum = 5001,
+    IP = "121.199.19.146",
     MirrorChannelID = 0,
     Port = 8000
   },
