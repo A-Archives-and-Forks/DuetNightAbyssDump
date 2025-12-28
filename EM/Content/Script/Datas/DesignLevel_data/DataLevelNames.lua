@@ -1,15 +1,14 @@
 local function make_read_only(t)
   return setmetatable({}, {
     __index = t,
-    
     __newindex = function()
       error("Attempt to modify read-only table")
     end
   })
 end
-
 return make_read_only({
   "Ailixian_CharTrial",
+  "Ailixian_Miandao",
   "Ailixian_Paotai01_Bat01",
   "Ailixian_Paotai01_Bat02",
   "Ailixian_Paotai01_Bat03",
@@ -40,8 +39,13 @@ return make_read_only({
   "Ailixian_Train01",
   "BH_Thea",
   "Chapter01_Abyss_Boss01",
+  "Chapter01_Abyss_Boss02",
   "Chapter01_Alch",
   "Chapter01_Flow",
+  "Chapter01_HardBoss_01",
+  "Chapter01_HardBoss_02",
+  "Chapter01_HardBoss_03",
+  "Chapter01_HardBoss_04",
   "Chapter01_Icelake",
   "Chapter01_IcelakeCity",
   "Chapter01_Kuangkeng_Connector_01",
@@ -171,6 +175,15 @@ return make_read_only({
   "Haiboliya_Chezhan03",
   "Haiboliya_Chezhan04",
   "Haiboliya_Chezhan05",
+  "Haiboliya_Chezhan_BHCZ",
+  "Haiboliya_Chezhan_CXQ",
+  "Haiboliya_Chezhan_HWQ",
+  "Haiboliya_Chezhan_JGQ",
+  "Haiboliya_Chezhan_YLQ",
+  "Haiboliya_Chezhan_YT",
+  "Haiboliya_Chezhan_YW",
+  "Haiboliya_Chezhan_YW01",
+  "Haiboliya_Chezhan_ZZZ",
   "Haiboliya_Longsha01",
   "Haiboliya_Longsha02",
   "Haiboliya_Longsha03",
@@ -182,6 +195,7 @@ return make_read_only({
   "Haiboliya_Station05",
   "HOME",
   "HomeBase",
+  "Huaxu_Haojing_Batt04",
   "Huaxu_Haojing_Eas",
   "Huaxu_Haojing_Inn",
   "Huaxu_Haojing_Int",
@@ -214,6 +228,7 @@ return make_read_only({
   "Huaxu_Yanjindu_Batt03",
   "Huaxu_Yanjindu_Cav",
   "Huaxu_Yanjindu_Cen",
+  "Huaxu_Yanjindu_Ext",
   "Huaxu_Yanjindu_Fil",
   "Huaxu_Yanjindu_Hos",
   "Huaxu_Yanjindu_Nai01",
@@ -224,6 +239,7 @@ return make_read_only({
   "Huaxu_Yanjindu_Por",
   "Huaxu_Yanjindu_Shi",
   "Huaxu_Yanjindu_Spr",
+  "Huaxu_Yanjindu_Stealth",
   "Invite_Yeer",
   "LevelSequenceState",
   "Party_Maze_02",
@@ -251,6 +267,7 @@ return make_read_only({
   "Prologue_Exit_02",
   "Prologue_Exit_03",
   "Prologue_GuideMan",
+  "Prologue_HardBoss_01",
   "Prologue_Raid_Boss01",
   "Prologue_Road_04",
   "Prologue_Road_05",
@@ -307,6 +324,10 @@ return make_read_only({
   "Temple_Battle_14",
   "Temple_Battle_15",
   "Temple_Battle_16",
+  "Temple_Battle_17",
+  "Temple_Battle_18",
+  "Temple_Burglar_01",
+  "Temple_Burglar_02",
   "Temple_jump_01",
   "Temple_jump_02",
   "Temple_ParkourMech_01",
@@ -336,5 +357,7 @@ return make_read_only({
   "Temple_Stealth_05",
   "Temple_Stealth_06",
   "Temple_Theft_01",
+  "Temple_Theft_02",
+  "Temple_Theft_03",
   "Test"
 })
